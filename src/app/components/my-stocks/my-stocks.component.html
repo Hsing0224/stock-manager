@@ -1,0 +1,53 @@
+<div class="my-stocks-container">
+  <h2>持股庫存管理</h2>
+
+  <div class="input-section">
+    <div class="add-stock">
+      <input
+        type="text"
+        [(ngModel)]="stockInput"
+        placeholder="輸入股號或公司名稱"
+        (keyup.enter)="addStock()"
+      />
+      <button class="btn btn-primary" (click)="addStock()">新增</button>
+    </div>
+  </div>
+
+  <div class="stock-list">
+    <h3>我的持股清單 ({{ stocks.length }})</h3>
+    @if (stocks.length === 0) {
+      <p class="empty-message">尚未加入任何持股</p>
+    } @else {
+      <ul>
+        @for (stock of stocks; track stock) {
+          <li>
+            <span class="stock-info">
+              <strong>{{ stock }}</strong>
+              @if (getStockName(stock)) {
+                <span class="stock-name">{{ getStockName(stock) }}</span>
+              }
+            </span>
+            <button class="btn btn-danger" (click)="removeStock(stock)">刪除</button>
+          </li>
+        }
+      </ul>
+    }
+  </div>
+
+  <div class="backup-section">
+    <h3>備份與還原</h3>
+    <div class="backup-actions">
+      <button class="btn btn-secondary" (click)="exportStocks()">匯出 JSON</button>
+      <div class="import-group">
+        <select [(ngModel)]="importMode">
+          <option value="merge">合併匯入</option>
+          <option value="overwrite">覆寫匯入</option>
+        </select>
+        <label class="btn btn-secondary file-label">
+          匯入 JSON
+          <input type="file" accept=".json" (change)="onFileSelected($event)" hidden />
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
