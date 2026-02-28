@@ -1,0 +1,91 @@
+<div class="data-display-container">
+  <section class="owned-section">
+    <h2>已持有 — 可領取紀念品 ({{ ownedSouvenirs.length }})</h2>
+    @if (ownedSouvenirs.length === 0) {
+      <p class="empty-message">您的持股清單中尚無可領取的紀念品，請先至「持股管理」新增持股。</p>
+    } @else {
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>股號</th>
+              <th>公司名稱</th>
+              <th>紀念品種類</th>
+              <th>紀念品名稱</th>
+              <th>最後買進日</th>
+              <th>股東會日期</th>
+              <th>領取資格</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (item of ownedSouvenirs; track item.stock_id) {
+              <tr>
+                <td>{{ item.stock_id }}</td>
+                <td>{{ item.stock_name }}</td>
+                <td>{{ item.souvenir_category }}</td>
+                <td>{{ item.souvenir_name }}</td>
+                <td>{{ item.last_buy_date }}</td>
+                <td>{{ item.meeting_date }}</td>
+                <td>
+                  @for (flag of item.eligibility_flags; track flag) {
+                    <span class="badge" [ngClass]="getFlagClass(flag)">{{ flag }}</span>
+                  }
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+  </section>
+
+  <section class="unowned-section">
+    <h2>未持有 — 其他紀念品 ({{ unownedSouvenirs.length }})</h2>
+    <div class="filter-bar">
+      <label>依紀念品種類篩選：</label>
+      <select [(ngModel)]="selectedCategory">
+        <option value="">全部</option>
+        @for (cat of categories; track cat) {
+          <option [value]="cat">{{ cat }}</option>
+        }
+      </select>
+    </div>
+
+    @if (unownedSouvenirs.length === 0) {
+      <p class="empty-message">沒有符合條件的紀念品。</p>
+    } @else {
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>股號</th>
+              <th>公司名稱</th>
+              <th>紀念品種類</th>
+              <th>紀念品名稱</th>
+              <th>最後買進日</th>
+              <th>股東會日期</th>
+              <th>領取資格</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (item of unownedSouvenirs; track item.stock_id) {
+              <tr>
+                <td>{{ item.stock_id }}</td>
+                <td>{{ item.stock_name }}</td>
+                <td>{{ item.souvenir_category }}</td>
+                <td>{{ item.souvenir_name }}</td>
+                <td>{{ item.last_buy_date }}</td>
+                <td>{{ item.meeting_date }}</td>
+                <td>
+                  @for (flag of item.eligibility_flags; track flag) {
+                    <span class="badge" [ngClass]="getFlagClass(flag)">{{ flag }}</span>
+                  }
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+  </section>
+</div>

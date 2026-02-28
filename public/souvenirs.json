@@ -1,0 +1,102 @@
+[
+  {
+    "stock_id": "2330",
+    "stock_name": "台積電",
+    "year": 2024,
+    "souvenir_category": "生活用品",
+    "souvenir_name": "特製馬克杯",
+    "eligibility_flags": ["零股可", "需身分證"],
+    "last_buy_date": "2024-03-15",
+    "meeting_date": "2024-06-05"
+  },
+  {
+    "stock_id": "2884",
+    "stock_name": "玉山金",
+    "year": 2024,
+    "souvenir_category": "超商商品卡",
+    "souvenir_name": "7-11商品卡50元",
+    "eligibility_flags": ["零股不發"],
+    "last_buy_date": "2024-04-01",
+    "meeting_date": "2024-06-15"
+  },
+  {
+    "stock_id": "0050",
+    "stock_name": "元大台灣50",
+    "year": 2024,
+    "souvenir_category": "超商商品卡",
+    "souvenir_name": "全家商品卡35元",
+    "eligibility_flags": ["零股可"],
+    "last_buy_date": "2024-03-20",
+    "meeting_date": "2024-07-10"
+  },
+  {
+    "stock_id": "2317",
+    "stock_name": "鴻海",
+    "year": 2024,
+    "souvenir_category": "生活用品",
+    "souvenir_name": "環保購物袋",
+    "eligibility_flags": ["零股可", "需電子投票"],
+    "last_buy_date": "2024-04-10",
+    "meeting_date": "2024-06-25"
+  },
+  {
+    "stock_id": "1301",
+    "stock_name": "台塑",
+    "year": 2024,
+    "souvenir_category": "保健食品",
+    "souvenir_name": "台塑生醫洗手乳",
+    "eligibility_flags": ["零股不發", "需身分證"],
+    "last_buy_date": "2024-03-25",
+    "meeting_date": "2024-06-20"
+  },
+  {
+    "stock_id": "2412",
+    "stock_name": "中華電",
+    "year": 2024,
+    "souvenir_category": "生活用品",
+    "souvenir_name": "LED手電筒",
+    "eligibility_flags": ["零股可"],
+    "last_buy_date": "2024-04-05",
+    "meeting_date": "2024-06-28"
+  },
+  {
+    "stock_id": "2882",
+    "stock_name": "國泰金",
+    "year": 2024,
+    "souvenir_category": "超商商品卡",
+    "souvenir_name": "全聯商品卡100元",
+    "eligibility_flags": ["零股不發", "需電子投票"],
+    "last_buy_date": "2024-04-15",
+    "meeting_date": "2024-06-18"
+  },
+  {
+    "stock_id": "3008",
+    "stock_name": "大立光",
+    "year": 2024,
+    "souvenir_category": "保健食品",
+    "souvenir_name": "維他命C禮盒",
+    "eligibility_flags": ["零股可", "需身分證"],
+    "last_buy_date": "2024-03-30",
+    "meeting_date": "2024-06-12"
+  },
+  {
+    "stock_id": "2454",
+    "stock_name": "聯發科",
+    "year": 2024,
+    "souvenir_category": "生活用品",
+    "souvenir_name": "不鏽鋼保溫瓶",
+    "eligibility_flags": ["零股可"],
+    "last_buy_date": "2024-04-08",
+    "meeting_date": "2024-07-01"
+  },
+  {
+    "stock_id": "1303",
+    "stock_name": "南亞",
+    "year": 2024,
+    "souvenir_category": "生活用品",
+    "souvenir_name": "保鮮盒組",
+    "eligibility_flags": ["零股不發"],
+    "last_buy_date": "2024-03-28",
+    "meeting_date": "2024-06-22"
+  }
+]
